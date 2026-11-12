@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yan, desenvolvedor full stack</title>
+  <meta name="description" content="Portfólio do Yan: sites no ar para clientes, um sistema de chamados com QR Code, um app de compartilhamento de tela em C# e um RPG de terminal em Python.">
+  <meta property="og:title" content="Yan, desenvolvedor full stack">
+  <meta property="og:description" content="Sites, sistemas, apps desktop e um RPG de terminal. Seis projetos, do banco de dados à interface.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#4A2BDB">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234A2BDB'/%3E%3Cpath d='M8 17l5 5 11-12' fill='none' stroke='%235DF0A8' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="pular" href="#projetos">Pular para os projetos</a>
+
+  <header class="abertura">
+    <div class="margem">
+      <nav class="topo" aria-label="Principal">
+        <a class="marca" href="#inicio">Yan <span class="marca-papel">- Full Stack Developer</span></a>
+        <ul>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="abertura-corpo" id="inicio">
+        <div class="apresentacao">
+          <img class="retrato" src="assets/yan.jpg" width="1024" height="1024" alt="Foto de perfil do Yan: um boneco desenhado a traço, olhando de lado">
+          <h1>Oi, eu sou o Yan.</h1>
+          <p class="faco">
+            <span class="so-leitor">Faço software para o navegador, o celular, o Windows e o terminal.</span>
+            <span aria-hidden="true">Faço software para <span class="faco-alvo"><span data-digitar>o navegador.</span><span class="cursor"></span></span></span>
+          </p>
+          <p class="intro">Sou desenvolvedor full stack e estudante de Desenvolvimento de Sistemas na ETEC. Já coloquei no ar três sites para clientes, um sistema de chamados por QR Code, um app de compartilhamento de tela e um RPG de terminal.</p>
+          <div class="acoes">
+            <a class="botao botao-claro" href="#projetos">Ver os projetos</a>
+            <a class="botao botao-contorno" href="mailto:yangdbr@gmail.com">Mandar e-mail</a>
+          </div>
+        </div>
+
+        <div class="vitrine" data-vitrine>
+          <div class="vitrine-palco">
+            <a class="vitrine-item" href="#topfly" data-frase="o navegador." aria-label="Ver o projeto Top Fly Balonismo">
+              <div class="janela navegador">
+                <div class="barra"><span class="endereco">topflybalonismo.com.br</span></div>
+                <div class="tela">
+                  <img src="assets/shots/topfly-hero.webp" width="1440" height="900" alt="Site da Top Fly Balonismo aberto no navegador">
+                </div>
+              </div>
+            </a>
+            <a class="vitrine-item vitrine-celulares" href="#qvt360" data-frase="o celular." aria-label="Ver os sites no celular, começando pelo QVT360°" hidden>
+              <div class="celular"><img src="assets/shots/qvt360-mobile.webp" width="780" height="1688" alt="QVT360° aberto no celular" loading="lazy"></div>
+              <div class="celular"><img src="assets/shots/bff-mobile.webp" width="780" height="1688" alt="Boituva Fitness Fair aberta no celular" loading="lazy"></div>
+            </a>
+            <a class="vitrine-item" href="#mgrscreen" data-frase="o Windows." aria-label="Ver o projeto MGRScreen" hidden>
+              <div class="janela windows">
+                <div class="barra"><span class="titulo-janela">MGRScreen</span><span class="controles" aria-hidden="true"><i></i><i></i><i></i></span></div>
+                <div class="tela">
+                  <img src="assets/shots/mgrscreen-sala.webp" width="1747" height="900" alt="MGRScreen no Windows, com duas telas sendo compartilhadas" loading="lazy">
+                </div>
+              </div>
+            </a>
+            <a class="vitrine-item vitrine-terminal" href="#wyrdfall" data-frase="o terminal." aria-label="Ver o projeto Wyrdfall" hidden>
+              <div class="janela terminal">
+                <div class="barra"><span class="titulo-janela">wyrdfall.exe</span><span class="controles" aria-hidden="true"><i></i><i></i><i></i></span></div>
+                <div class="tela">
+                  <img src="assets/shots/wyrdfall-combate.webp" width="1726" height="1170" alt="Combate do Wyrdfall rodando no terminal" loading="lazy">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="vitrine-abas" role="group" aria-label="Escolher o tipo de tela mostrado">
+            <button type="button" data-aba aria-pressed="true">Navegador</button>
+            <button type="button" data-aba aria-pressed="false">Celular</button>
+            <button type="button" data-aba aria-pressed="false">Windows</button>
+            <button type="button" data-aba aria-pressed="false">Terminal</button>
+            <button type="button" class="pausa" data-pausa hidden>Pausar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="projetos" id="projetos" aria-labelledby="titulo-sites">
+      <div class="margem">
+        <div class="grupo-cabeca" data-revelar>
+          <h2 id="titulo-sites">Sites no ar</h2>
+          <p>Três endereços que estão recebendo visitas agora. Fiz cada um sozinho, do layout à publicação.</p>
+        </div>
+
+        <article class="projeto" id="qvt360">
+          <div class="projeto-texto" data-revelar>
+            <h3>QVT360°</h3>
+            <p class="resumo">Plataforma que conecta empresas a especialistas em saúde, segurança do trabalho e qualidade de vida.</p>
+            <p>A empresa busca especialistas por localização, pede propostas e fecha o contrato sem sair da plataforma. O especialista monta um perfil com avaliações e encontra serviços perto dele. O mesmo endereço atende os dois públicos, cada um com o seu caminho.</p>
+            <dl class="ficha">
+              <dt>Feito com</dt>
+              <dd><ul class="tecnologias" data-cascata>
+                <li><img src="assets/icons/react.svg" width="20" height="20" alt="" loading="lazy">React</li>
+                <li><img src="assets/icons/supabase.svg" width="20" height="20" alt="" loading="lazy">Supabase</li>
+              </ul></dd>
+            </dl>
+            <p class="links">
+              <a href="https://qvt360.com.br" target="_blank" rel="noopener">Abrir qvt360.com.br</a>
+            </p>
+          </div>
+          <figure class="palco palco-web" data-vistas data-revelar="lado">
+            <div class="cena">
+              <div class="janela navegador">
+                <div class="barra"><span class="endereco">qvt360.com.br</span></div>
+                <div class="tela">
+                  <img src="assets/shots/qvt360-hero.webp" width="1440" height="900" alt="Página inicial do QVT360°, com o título Sua Empresa com Mais Vida e botões Sou Empresa e Sou Especialista" loading="lazy">
+                  <img hidden src="assets/shots/qvt360-plataforma.webp" width="1440" height="900" alt="Seção do QVT360° que separa o que a plataforma oferece para empresas e para especialistas" loading="lazy">
+                </div>
+              </div>
+              <div class="celular">
+                <img src="assets/shots/qvt360-mobile.webp" width="780" height="1688" alt="Página inicial do QVT360° no celular" loading="lazy">
+              </div>
+            </div>
+            <figcaption class="vistas">
+              <button type="button" aria-pressed="true">Início</button>
+              <button type="button" aria-pressed="false">Para quem é</button>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="projeto" id="topfly">
+          <div class="projeto-texto" data-revelar>
+            <h3>Top Fly Balonismo</h3>
+            <p class="resumo">Site de uma empresa de voos de balão em Boituva, no interior de São Paulo.</p>
+            <p>Apresenta o passeio, as quatro modalidades de voo com preço, a galeria de fotos, um vídeo gravado a bordo e as dúvidas mais comuns. Quem decide voar preenche o pedido no site e termina de combinar com a equipe pelo WhatsApp.</p>
+            <dl class="ficha">
+              <dt>Feito com</dt>
+              <dd><ul class="tecnologias" data-cascata>
+                <li><img src="assets/icons/react.svg" width="20" height="20" alt="" loading="lazy">React</li>
+              </ul></dd>
+            </dl>
+            <p class="links">
+              <a href="https://topflybalonismo.com.br" target="_blank" rel="noopener">Abrir topflybalonismo.com.br</a>
+            </p>
+          </div>
+          <figure class="palco palco-web" data-vistas data-revelar="lado">
+            <div class="cena">
+              <div class="janela navegador">
+                <div class="barra"><span class="endereco">topflybalonismo.com.br</span></div>
+                <div class="tela">
+                  <img src="assets/shots/topfly-hero.webp" width="1440" height="900" alt="Página inicial da Top Fly: um dia você acorda cedo pra trabalhar, outro, pra voar, ao lado da foto de um balão" loading="lazy">
+                  <img hidden src="assets/shots/topfly-voos.webp" width="1440" height="900" alt="Seção com as quatro modalidades de voo da Top Fly e seus preços" loading="lazy">
+                </div>
+              </div>
+              <div class="celular">
+                <img src="assets/shots/topfly-mobile.webp" width="780" height="1688" alt="Página inicial da Top Fly no celular" loading="lazy">
+              </div>
+            </div>
+            <figcaption class="vistas">
+              <button type="button" aria-pressed="true">Início</button>
+              <button type="button" aria-pressed="false">Voos e preços</button>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="projeto" id="bff">
+          <div class="projeto-texto" data-revelar>
+            <h3>Boituva Fitness Fair</h3>
+            <p class="resumo">Site oficial da primeira feira fitness de Boituva, realizada em agosto de 2026.</p>
+            <p>Reúne em um só endereço os ingressos e inscrições, com venda pela Sympla, a programação dos dois dias, expositores, patrocinadores, competições e o credenciamento.</p>
+            <dl class="ficha">
+              <dt>Feito com</dt>
+              <dd><ul class="tecnologias" data-cascata>
+                <li><img src="assets/icons/react.svg" width="20" height="20" alt="" loading="lazy">React</li>
+              </ul></dd>
+            </dl>
+            <p class="links">
+              <a href="https://boituvafitnessfair.com.br" target="_blank" rel="noopener">Abrir boituvafitnessfair.com.br</a>
+              <a href="https://github.com/YanGDBr/boituva-fitness-fair" target="_blank" rel="noopener">Ver o código no GitHub</a>
+            </p>
+          </div>
+          <figure class="palco palco-web" data-vistas data-revelar="lado">
+            <div class="cena">
+              <div class="janela navegador">
+                <div class="barra"><span class="endereco">boituvafitnessfair.com.br</span></div>
+                <div class="tela">
+                  <img src="assets/shots/bff-hero.webp" width="1440" height="900" alt="Página inicial da Boituva Fitness Fair, com a data do evento e o botão Garantir ingresso" loading="lazy">
+                  <img hidden src="assets/shots/bff-ingressos.webp" width="1440" height="900" alt="Seção de ingressos e inscrições da Boituva Fitness Fair" loading="lazy">
+                </div>
+              </div>
+              <div class="celular">
+                <img src="assets/shots/bff-mobile.webp" width="780" height="1688" alt="Página inicial da Boituva Fitness Fair no celular" loading="lazy">
+              </div>
+            </div>
+            <figcaption class="vistas">
+              <button type="button" aria-pressed="true">Início</button>
+              <button type="button" aria-pressed="false">Ingressos</button>
+            </figcaption>
+          </figure>
+        </article>
+
+        <div class="grupo-cabeca" data-revelar>
+          <h2 id="titulo-sistemas">Sistemas, apps e um jogo</h2>
+          <p>Projetos que saem do navegador: uma API com app de celular, um programa para Windows e um jogo de terminal.</p>
+        </div>
+
+        <article class="projeto" id="mgrcall">
+          <div class="projeto-texto" data-revelar>
+            <h3>MGRCall</h3>
+            <p class="resumo">Chamados de manutenção abertos pelo QR Code colado na máquina.</p>
+            <p>O operador aponta o celular para a etiqueta e abre o chamado em segundos. O técnico atende pela fila no aplicativo. O gestor acompanha, no painel web, quais máquinas estão paradas, há quanto tempo e com quem.</p>
+            <p>É o meu trabalho de conclusão de curso, feito em equipe com Leo Nycolas, Breno Bronzere e Pedro Ohara.</p>
+            <dl class="ficha">
+              <dt>API</dt>
+              <dd><ul class="tecnologias" data-cascata>
+                <li><img src="assets/icons/nodejs.svg" width="20" height="20" alt="" loading="lazy">Node.js</li>
+                <li><img src="assets/icons/express.svg" width="20" height="20" alt="" loading="lazy">Express</li>
+                <li><img src="assets/icons/prisma.svg" width="20" height="20" alt="" loading="lazy">Prisma</li>
+                <li><img src="assets/icons/postgresql.svg" width="20" height="20" alt="" loading="lazy">PostgreSQL</li>
+              </ul></dd>
+              <dt>Aplicativo</dt>
+              <dd><ul class="tecnologias" data-cascata>
+                <li><img src="assets/icons/react.svg" width="20" height="20" alt="" loading="lazy">React Native</li>
+                <li><img src="assets/icons/expo.svg" width="20" height="20" alt="" loading="lazy">Expo</li>
+              </ul></dd>
+              <dt>Site e painel</dt>
+              <dd><ul class="tecnologias" data-cascata>
+                <li><img src="assets/icons/nextjs.svg" width="20" height="20" alt="" loading="lazy">Next.js</li>
+                <li><img src="assets/icons/tailwind.svg" width="20" height="20" alt="" loading="lazy">Tailwind</li>
+              </ul></dd>
+            </dl>
+          </div>
+          <figure class="palco palco-web" data-vistas data-revelar="lado">
+            <div class="cena">
+              <div class="janela navegador">
+                <div class="barra"><span class="endereco">MGRCall</span></div>
+                <div class="tela">
+                  <img src="assets/shots/mgrcall-hero.webp" width="1800" height="1125" alt="Site do MGRCall: a etiqueta com QR Code, o celular do operador com o chamado registrado e o painel do gestor mostrando uma máquina parada" loading="lazy">
+                  <img hidden src="assets/shots/mgrcall-painel.webp" width="1440" height="900" alt="Painel do gestor no MGRCall, com três máquinas paradas, chamados dos últimos sete dias e tempo parado por máquina" loading="lazy">
+                </div>
+              </div>
+              <div class="celular">
+                <img src="assets/shots/mgrcall-mobile.webp" width="780" height="1688" alt="Página do aplicativo MGRCall vista no celular" loading="lazy">
+              </div>
+            </div>
+            <figcaption class="vistas">
+              <button type="button" aria-pressed="true">Do QR ao painel</button>
+              <button type="button" aria-pressed="false">Painel do gestor</button>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="projeto" id="mgrscreen">
+          <div class="projeto-texto" data-revelar>
+            <h3>MGRScreen</h3>
+            <p class="resumo">Compartilhamento de tela e áudio no Windows, com visualizador para Android.</p>
+            <p>Alguém cria uma sala e qualquer participante pode compartilhar a tela, inclusive vários ao mesmo tempo. Funciona na rede local ou pelo Tailscale, sem servidor hospedado e sem conta.</p>
+            <dl class="ficha">
+              <dt>Windows</dt>
+              <dd><ul class="tecnologias" data-cascata>
+                <li><img src="assets/icons/csharp.svg" width="20" height="20" alt="" loading="lazy">C#</li>
+                <li><img src="assets/icons/windows.svg" width="20" height="20" alt="" loading="lazy">WPF</li>
+                <li><img src="assets/icons/dotnet.svg" width="20" height="20" alt="" loading="lazy">.NET 8</li>
+                <li><img src="assets/icons/ffmpeg.svg" width="20" height="20" alt="" loading="lazy">FFmpeg</li>
+              </ul></dd>
+              <dt>Android</dt>
+              <dd><ul class="tecnologias" data-cascata>
+                <li><img src="assets/icons/kotlin.svg" width="20" height="20" alt="" loading="lazy">Kotlin</li>
+                <li><img src="assets/icons/compose.svg" width="20" height="20" alt="" loading="lazy">Jetpack Compose</li>
+              </ul></dd>
+            </dl>
+            <p class="links">
+              <a href="https://github.com/YanGDBr/MGRScreen/releases/tag/v1.0.1" target="_blank" rel="noopener">Baixar a versão 1.0.1</a>
+              <a href="https://github.com/YanGDBr/MGRScreen" target="_blank" rel="noopener">Ver o código no GitHub</a>
+            </p>
+          </div>
+          <div class="palco palco-desktop">
+            <figure class="sala" data-revelar="lado">
+              <div class="janela windows">
+                <div class="barra"><span class="titulo-janela">MGRScreen</span><span class="controles" aria-hidden="true"><i></i><i></i><i></i></span></div>
+                <div class="tela">
+                  <img src="assets/shots/mgrscreen-sala.webp" width="1747" height="900" alt="Sala do MGRScreen com quatro participantes e duas telas compartilhadas lado a lado: a do Yan, com um editor de fotos, e a do Lucas, com uma paisagem" loading="lazy">
+                </div>
+              </div>
+              <figcaption>Uma sala com quatro participantes e duas telas compartilhadas ao mesmo tempo, em 1080p a 60 quadros por segundo.</figcaption>
+            </figure>
+            <figure class="detalhe">
+              <div class="janela windows" data-revelar>
+                <div class="barra"><span class="titulo-janela">MGRScreen</span><span class="controles" aria-hidden="true"><i></i><i></i><i></i></span></div>
+                <div class="tela">
+                  <img src="assets/shots/mgrscreen-app.png" width="619" height="594" alt="Tela inicial do MGRScreen no Windows, com o campo de apelido e o botão Criar sala" loading="lazy">
+                </div>
+              </div>
+              <figcaption class="caminho">
+                <p>O caminho de um quadro, da tela de quem compartilha até quem assiste:</p>
+                <ol data-cascata>
+                  <li><strong>Captura.</strong> Windows Graphics Capture pega a tela e WASAPI pega o áudio.</li>
+                  <li><strong>Codificação.</strong> O FFmpeg gera H.264, usando a placa de vídeo quando ela existe.</li>
+                  <li><strong>Sala.</strong> O computador do anfitrião repassa o vídeo para todos os outros.</li>
+                  <li><strong>Exibição.</strong> Cada participante decodifica e vê as telas em grade. No Android, com MediaCodec.</li>
+                </ol>
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="projeto" id="wyrdfall">
+          <div class="projeto-texto" data-revelar>
+            <h3>Wyrdfall</h3>
+            <p class="resumo">RPG roguelike de fantasia sombria que roda inteiro no terminal.</p>
+            <p>Combate por turnos, talentos, cartas, runas e equipamentos para montar um personagem diferente a cada expedição. Dá para jogar sozinho ou em grupo pela rede, cada um controlando o próprio herói.</p>
+            <p>Hoje são mais de 22 mil linhas de Python e 608 testes automatizados.</p>
+            <dl class="ficha">
+              <dt>Feito com</dt>
+              <dd><ul class="tecnologias" data-cascata>
+                <li><img src="assets/icons/python.svg" width="20" height="20" alt="" loading="lazy">Python</li>
+                <li><img src="assets/icons/textual.svg" width="20" height="20" alt="" loading="lazy">Textual</li>
+                <li><img src="assets/icons/websockets.svg" width="20" height="20" alt="" loading="lazy">WebSockets</li>
+                <li><img src="assets/icons/pydantic.svg" width="20" height="20" alt="" loading="lazy">Pydantic</li>
+              </ul></dd>
+            </dl>
+            <p class="links">
+              <a href="https://github.com/YanGDBr/Wyrdfall/releases" target="_blank" rel="noopener">Baixar para Windows</a>
+              <a href="https://github.com/YanGDBr/Wyrdfall" target="_blank" rel="noopener">Ver o código no GitHub</a>
+            </p>
+          </div>
+          <figure class="palco palco-terminal" data-vistas data-revelar="lado">
+            <div class="janela terminal">
+              <div class="barra"><span class="titulo-janela">wyrdfall.exe</span><span class="controles" aria-hidden="true"><i></i><i></i><i></i></span></div>
+              <div class="tela">
+                <img src="assets/shots/wyrdfall-combate.webp" width="1726" height="1170" alt="Combate no Wyrdfall: ordem de turno, barras de vida do herói e dos goblins, registro da batalha e botões de ação" loading="lazy">
+                <img hidden src="assets/shots/wyrdfall-menu.webp" width="1726" height="1170" alt="Menu inicial do Wyrdfall, com o logotipo em arte ASCII e as opções de jogo" loading="lazy">
+                <img hidden src="assets/shots/wyrdfall-arquetipo.webp" width="1726" height="1170" alt="Tela de escolha de arquétipo do Wyrdfall, com o Guardião das Runas selecionado" loading="lazy">
+                <img hidden src="assets/shots/wyrdfall-masmorra.webp" width="1726" height="1170" alt="Mapa da masmorra no Wyrdfall, com o grupo, a sala atual e os botões do personagem" loading="lazy">
+              </div>
+            </div>
+            <figcaption class="vistas">
+              <button type="button" aria-pressed="true">Combate</button>
+              <button type="button" aria-pressed="false">Menu</button>
+              <button type="button" aria-pressed="false">Arquétipo</button>
+              <button type="button" aria-pressed="false">Masmorra</button>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="indice" aria-labelledby="titulo-indice">
+      <div class="margem">
+        <h2 id="titulo-indice" data-revelar>Seis projetos, quatro tipos de tela</h2>
+        <div class="tabela-rolagem">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Projeto</th>
+                <th scope="col">O que é</th>
+                <th scope="col" class="col-extra">Feito com</th>
+                <th scope="col" class="col-extra">Onde roda</th>
+                <th scope="col">Situação</th>
+              </tr>
+            </thead>
+            <tbody data-cascata>
+              <tr>
+                <th scope="row"><a href="#qvt360">QVT360°</a></th>
+                <td>Plataforma de saúde e segurança do trabalho</td>
+                <td class="col-extra"><span class="icones"><img src="assets/icons/react.svg" width="22" height="22" alt="React" title="React" loading="lazy"><img src="assets/icons/supabase.svg" width="22" height="22" alt="Supabase" title="Supabase" loading="lazy"></span></td>
+                <td class="col-extra">Navegador</td>
+                <td><span class="situacao no-ar">No ar</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="#topfly">Top Fly Balonismo</a></th>
+                <td>Site de voos de balão em Boituva</td>
+                <td class="col-extra"><span class="icones"><img src="assets/icons/react.svg" width="22" height="22" alt="React" title="React" loading="lazy"></span></td>
+                <td class="col-extra">Navegador</td>
+                <td><span class="situacao no-ar">No ar</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="#bff">Boituva Fitness Fair</a></th>
+                <td>Site oficial de uma feira fitness</td>
+                <td class="col-extra"><span class="icones"><img src="assets/icons/react.svg" width="22" height="22" alt="React" title="React" loading="lazy"></span></td>
+                <td class="col-extra">Navegador</td>
+                <td><span class="situacao no-ar">No ar</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="#mgrcall">MGRCall</a></th>
+                <td>Chamados de manutenção por QR Code</td>
+                <td class="col-extra"><span class="icones"><img src="assets/icons/nodejs.svg" width="22" height="22" alt="Node.js" title="Node.js" loading="lazy"><img src="assets/icons/postgresql.svg" width="22" height="22" alt="PostgreSQL" title="PostgreSQL" loading="lazy"><img src="assets/icons/react.svg" width="22" height="22" alt="React Native" title="React Native" loading="lazy"><img src="assets/icons/nextjs.svg" width="22" height="22" alt="Next.js" title="Next.js" loading="lazy"></span></td>
+                <td class="col-extra">Celular e navegador</td>
+                <td><span class="situacao em-obra">TCC em andamento</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="#mgrscreen">MGRScreen</a></th>
+                <td>Compartilhamento de tela e áudio</td>
+                <td class="col-extra"><span class="icones"><img src="assets/icons/csharp.svg" width="22" height="22" alt="C#" title="C#" loading="lazy"><img src="assets/icons/dotnet.svg" width="22" height="22" alt=".NET 8" title=".NET 8" loading="lazy"><img src="assets/icons/kotlin.svg" width="22" height="22" alt="Kotlin" title="Kotlin" loading="lazy"></span></td>
+                <td class="col-extra">Windows e Android</td>
+                <td><span class="situacao no-ar">Versão 1.0.1</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="#wyrdfall">Wyrdfall</a></th>
+                <td>RPG roguelike por turnos</td>
+                <td class="col-extra"><span class="icones"><img src="assets/icons/python.svg" width="22" height="22" alt="Python" title="Python" loading="lazy"><img src="assets/icons/textual.svg" width="22" height="22" alt="Textual" title="Textual" loading="lazy"></span></td>
+                <td class="col-extra">Terminal</td>
+                <td><span class="situacao em-obra">Em desenvolvimento</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre" id="sobre" aria-labelledby="titulo-sobre">
+      <div class="margem sobre-grade">
+        <div class="sobre-texto" data-revelar>
+          <div class="sobre-cabeca">
+            <img class="retrato" src="assets/yan.jpg" width="1024" height="1024" alt="" loading="lazy">
+            <h2 id="titulo-sobre">Sobre mim</h2>
+          </div>
+          <p>Sou estudante de Desenvolvimento de Sistemas na ETEC, no interior de São Paulo. Trabalho do banco de dados à interface e gosto de trocar de plataforma: web, celular, desktop e terminal.</p>
+          <p>No tempo livre resolvo desafios de lógica no LeetCode. De lá veio o jeito de trabalhar que descrevi no meu perfil do GitHub:</p>
+          <pre class="trecho" tabindex="0" data-laco><code><span class="linha">resolver(problema) {</span>
+<span class="linha">  while (!problema.accepted) {</span>
+<span class="linha" data-passo>    tentar();</span>
+<span class="linha" data-passo>    errar();     // Wrong Answer faz parte</span>
+<span class="linha" data-passo>    aprender();</span>
+<span class="linha">  }</span>
+<span class="linha" data-fim>  return "Accepted";</span>
+<span class="linha">}</span></code></pre>
+        </div>
+
+        <dl class="pilha">
+          <div>
+            <dt>Uso hoje</dt>
+            <dd><ul class="tecnologias grandes" data-cascata>
+                <li><img src="assets/icons/csharp.svg" width="20" height="20" alt="" loading="lazy">C#</li>
+                <li><img src="assets/icons/nodejs.svg" width="20" height="20" alt="" loading="lazy">Node.js</li>
+                <li><img src="assets/icons/react.svg" width="20" height="20" alt="" loading="lazy">React</li>
+                <li><img src="assets/icons/supabase.svg" width="20" height="20" alt="" loading="lazy">Supabase</li>
+              </ul></dd>
+          </div>
+          <div>
+            <dt>Estou estudando</dt>
+            <dd><ul class="tecnologias grandes" data-cascata>
+                <li><img src="assets/icons/nextjs.svg" width="20" height="20" alt="" loading="lazy">Next.js</li>
+                <li><img src="assets/icons/laravel.svg" width="20" height="20" alt="" loading="lazy">Laravel</li>
+                <li><img src="assets/icons/angular.svg" width="20" height="20" alt="" loading="lazy">Angular</li>
+              </ul></dd>
+          </div>
+          <div>
+            <dt>Próximo da fila</dt>
+            <dd><ul class="tecnologias grandes" data-cascata>
+                <li><img src="assets/icons/redis.svg" width="20" height="20" alt="" loading="lazy">Redis</li>
+              </ul></dd>
+          </div>
+          <div>
+            <dt>Linguagens que já usei</dt>
+            <dd><ul class="tecnologias grandes" data-cascata>
+                <li><img src="assets/icons/javascript.svg" width="20" height="20" alt="" loading="lazy">JavaScript</li>
+                <li><img src="assets/icons/typescript.svg" width="20" height="20" alt="" loading="lazy">TypeScript</li>
+                <li><img src="assets/icons/python.svg" width="20" height="20" alt="" loading="lazy">Python</li>
+                <li><img src="assets/icons/csharp.svg" width="20" height="20" alt="" loading="lazy">C#</li>
+                <li><img src="assets/icons/cplusplus.svg" width="20" height="20" alt="" loading="lazy">C++</li>
+                <li><img src="assets/icons/php.svg" width="20" height="20" alt="" loading="lazy">PHP</li>
+                <li><img src="assets/icons/dart.svg" width="20" height="20" alt="" loading="lazy">Dart</li>
+                <li><img src="assets/icons/lua.svg" width="20" height="20" alt="" loading="lazy">Lua</li>
+              </ul></dd>
+          </div>
+          <div>
+            <dt>Bancos de dados</dt>
+            <dd><ul class="tecnologias grandes" data-cascata>
+                <li><img src="assets/icons/postgresql.svg" width="20" height="20" alt="" loading="lazy">PostgreSQL</li>
+                <li><img src="assets/icons/mysql.svg" width="20" height="20" alt="" loading="lazy">MySQL</li>
+                <li><img src="assets/icons/mongodb.svg" width="20" height="20" alt="" loading="lazy">MongoDB</li>
+                <li><img src="assets/icons/firebase.svg" width="20" height="20" alt="" loading="lazy">Firebase</li>
+                <li><img src="assets/icons/supabase.svg" width="20" height="20" alt="" loading="lazy">Supabase</li>
+              </ul></dd>
+          </div>
+          <div>
+            <dt>Também no caminho</dt>
+            <dd><ul class="tecnologias grandes" data-cascata>
+                <li><img src="assets/icons/express.svg" width="20" height="20" alt="" loading="lazy">Express</li>
+                <li><img src="assets/icons/vue.svg" width="20" height="20" alt="" loading="lazy">Vue</li>
+                <li><img src="assets/icons/tailwind.svg" width="20" height="20" alt="" loading="lazy">Tailwind</li>
+                <li><img src="assets/icons/flutter.svg" width="20" height="20" alt="" loading="lazy">Flutter</li>
+                <li><img src="assets/icons/docker.svg" width="20" height="20" alt="" loading="lazy">Docker</li>
+                <li><img src="assets/icons/arduino.svg" width="20" height="20" alt="" loading="lazy">Arduino</li>
+              </ul></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contato" id="contato">
+    <div class="margem">
+      <div class="contato-grade">
+        <div class="contato-chamada" data-revelar>
+          <h2>Tem um problema para resolver?</h2>
+          <p>Me chama no WhatsApp ou manda um e&#8209;mail contando o que você precisa. O código dos meus projetos está no GitHub.</p>
+        </div>
+
+        <ul class="canais" data-cascata>
+          <li>
+            <a class="canal" href="https://wa.me/5515991688194?text=Oi%2C%20Yan!%20Vi%20o%20seu%20portf%C3%B3lio." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              <span><span class="canal-rotulo">WhatsApp</span><span class="canal-valor">(15) 99168-8194</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="canal" href="mailto:yangdbr@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1.6 2 7.4 5.6L19.400 7H4.600ZM20 8.300l-7.400 5.600a1 1 0 0 1-1.200 0L4 8.300V17h16V8.300Z"/></svg>
+              <span><span class="canal-rotulo">E-mail</span><span class="canal-valor">yangdbr@gmail.com</span></span>
+            </a>
+            <button class="copiar" type="button" data-copiar="yangdbr@gmail.com">Copiar e-mail</button>
+          </li>
+          <li>
+            <a class="canal" href="https://github.com/YanGDBr" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <span><span class="canal-rotulo">GitHub</span><span class="canal-valor">github.com/YanGDBr</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="rodape">
+        <p>Yan, 2026. Feito com HTML, CSS e um pouco de JavaScript.</p>
+        <a href="#inicio">Voltar ao início</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-12T03:52:27.488Z",
+        "reason": "Claude: falso positivo na secao .sobre; o recuo lateral existe (padding 4rem var(--calha)), o detector nao resolve o clamp() da variavel"
+      }
+    ]
+  }
+}
